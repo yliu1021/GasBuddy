@@ -14,6 +14,8 @@
 		E2370D0B275680AC00607F2D /* GasBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D0A275680AC00607F2D /* GasBuddyTests.swift */; };
 		E2370D15275680AC00607F2D /* GasBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D14275680AC00607F2D /* GasBuddyUITests.swift */; };
 		E2370D17275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D16275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift */; };
+		E2370D272756985E00607F2D /* FillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D262756985E00607F2D /* FillView.swift */; };
+		E2370D29275699F500607F2D /* FillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D28275699F500607F2D /* FillViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E2370D10275680AC00607F2D /* GasBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2370D14275680AC00607F2D /* GasBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITests.swift; sourceTree = "<group>"; };
 		E2370D16275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E2370D262756985E00607F2D /* FillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillView.swift; sourceTree = "<group>"; };
+		E2370D28275699F500607F2D /* FillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		E2370CF8275680AB00607F2D /* GasBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E2370D252756984A00607F2D /* Views */,
 				E2370CF9275680AB00607F2D /* GasBuddyApp.swift */,
 				E2370CFB275680AB00607F2D /* ContentView.swift */,
 				E2370CFD275680AC00607F2D /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				E2370D16275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift */,
 			);
 			path = GasBuddyUITests;
+			sourceTree = "<group>";
+		};
+		E2370D252756984A00607F2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2370D262756985E00607F2D /* FillView.swift */,
+				E2370D28275699F500607F2D /* FillViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2370CFC275680AB00607F2D /* ContentView.swift in Sources */,
+				E2370D29275699F500607F2D /* FillViewModel.swift in Sources */,
+				E2370D272756985E00607F2D /* FillView.swift in Sources */,
 				E2370CFA275680AB00607F2D /* GasBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
