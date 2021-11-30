@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct FillView: View {
+  @Binding var isPresented: Bool
+
+  @StateObject private var state = FillViewModel()
+
   enum Field: Hashable {
     case totalPrice
     case gallons
   }
-
-  @StateObject private var state = FillViewModel()
-
   @FocusState private var focusedField: Field?
   @State private var totalPriceValid = true
   @State private var gallonsValid = true
+  @State private var saving = false
+  @State private var saveError = false
 
   let formatter: Formatter = {
     let formatter = NumberFormatter()
@@ -28,6 +31,17 @@ struct FillView: View {
   var body: some View {
     VStack(alignment: .center, content: {
       Spacer()
+      if saving {
+        VStack {
+          Text("Saving...")
+          ProgressView()
+            .progressViewStyle(CircularProgressViewStyle())
+        }
+      }
+      if saveError {
+        Text("Error saving! Please try again later.")
+          .foregroundColor(Color.red)
+      }
       Group {
         HStack {
           Text("$")
@@ -38,7 +52,7 @@ struct FillView: View {
             valid: $totalPriceValid)
             .focused($focusedField, equals: .totalPrice)
         }
-        .font(.largeTitle)
+        .font(.system(size: 80, weight: .bold, design: .rounded))
         Text("Total Price").font(.caption)
       }
       Group {
@@ -48,24 +62,37 @@ struct FillView: View {
           prompt: "0",
           valid: $gallonsValid)
           .focused($focusedField, equals: .gallons)
-          .font(.title)
+          .font(.system(size: 60, weight: .bold, design: .rounded))
         Text("Gallons").font(.caption)
       }
       Spacer()
-      Button("Done") {
-        focusedField = validate()
+      Button {
+        let newFocusedField = validate()
+        self.focusedField = newFocusedField
+        if newFocusedField == nil {
+          // nil means the numbers are good
+          saveError = false
+          saving = true
+          state.save { success in
+            saving = false
+            if success {
+              self.isPresented = false
+            } else {
+              saveError = true
+            }
+          }
+        }
+      } label: {
+        Text("Done")
+          .foregroundColor(Color.white)
+          .frame(height: 44)
+          .frame(maxWidth: .infinity)
+          .animation(nil, value: focusedField)
+          .background(focusedField != nil ? Color.black : Color.white)
+          .animation(.easeIn(duration: 0.1), value: focusedField)
       }
-      .frame(height: focusedField != nil ? 44 : 0)
-      .frame(maxWidth: .infinity)
-      .background(Color.black)
-      .foregroundColor(Color.white)
+      .disabled(focusedField == nil)
     })
-      .onAppear {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-          // hacky workaround to set default focus on totalPrice text field
-          self.focusedField = .totalPrice
-        })
-      }
   }
 
   func validate() -> Field? {
@@ -99,7 +126,7 @@ struct NumberFieldView: View {
       text: $text,
       prompt: Text(prompt))
       .keyboardType(.decimalPad)
-      .frame(maxWidth: 200)
+      .frame(maxWidth: 300)
       .fixedSize()
       .padding(2)
       .overlay(
@@ -114,6 +141,6 @@ struct NumberFieldView: View {
 
 struct FillView_Previews: PreviewProvider {
   static var previews: some View {
-    FillView()
+    FillView(isPresented: .constant(true))
   }
 }

@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @State private var presentingFillView = false
+
   var body: some View {
-    FillView()
+    VStack {
+      Button("Add") {
+        self.presentingFillView = true
+      }
+    }
+    .popover(isPresented: $presentingFillView) {
+      FillView(isPresented: $presentingFillView)
+    }
   }
 }
 

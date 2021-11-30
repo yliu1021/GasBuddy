@@ -54,4 +54,10 @@ class FillViewModel: ObservableObject {
       return .invalid(reason: invalidFields)
     }
   }
+
+  func save(onDone: @escaping (_ success: Bool) -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...2)) {
+      onDone(Bool.random())
+    }
+  }
 }
