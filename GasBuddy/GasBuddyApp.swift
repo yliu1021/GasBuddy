@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct GasBuddyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

@@ -134,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2370D1A275680AC00607F2D /* Build configuration list for PBXNativeTarget "GasBuddy" */;
 			buildPhases = (
+				E2370D232756835500607F2D /* Swift Lint */,
 				E2370CF2275680AB00607F2D /* Sources */,
 				E2370CF3275680AB00607F2D /* Frameworks */,
 				E2370CF4275680AB00607F2D /* Resources */,
+				E2370D24275683A400607F2D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +253,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2370D232756835500607F2D /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E2370D24275683A400607F2D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2370CF2275680AB00607F2D /* Sources */ = {
