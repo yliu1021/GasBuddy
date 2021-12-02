@@ -73,6 +73,7 @@
 		E27750BE2758910100F189AA /* PastTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripsView.swift; sourceTree = "<group>"; };
 		E27750C02758911000F189AA /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		E27750C2275895BD00F189AA /* PastTripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripsViewModel.swift; sourceTree = "<group>"; };
+		E27750C42758A08200F189AA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 		E2370CED275680AB00607F2D = {
 			isa = PBXGroup;
 			children = (
+				E27750C42758A08200F189AA /* README.md */,
 				E2370CF8275680AB00607F2D /* GasBuddy */,
 				E2370D09275680AC00607F2D /* GasBuddyTests */,
 				E2370D13275680AC00607F2D /* GasBuddyUITests */,
