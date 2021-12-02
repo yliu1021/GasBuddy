@@ -12,16 +12,7 @@ struct ContentView: View {
   @State private var presentingFillView = false
 
   var body: some View {
-    VStack {
-      Button {
-        self.presentingFillView = true
-      } label: {
-        Text("Add")
-      }
-    }
-    .popover(isPresented: $presentingFillView) {
-      GasTripView(isPresented: $presentingFillView)
-    }
+    PastTripsView()
   }
 }
 

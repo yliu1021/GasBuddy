@@ -5,11 +5,11 @@
 //  Created by Yuhan Liu on 11/30/21.
 //
 
+import CloudKit
 import CoreLocation
 import FirebaseFirestore
-import Foundation
-import CloudKit
 import FirebaseFirestoreSwift
+import Foundation
 
 struct Location: Codable {
   var latitude: Double

@@ -5,11 +5,11 @@
 //  Created by Yuhan Liu on 11/30/21.
 //
 
-import SwiftUI
-import CoreLocation
 import Combine
+import CoreLocation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import SwiftUI
 
 class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
@@ -37,13 +37,15 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
       streetAddress: addressString,
       date: Date(),
       location: location)
-    _ = try? tripCollection.addDocument(from: newTrip, completion: { error in
-      if error != nil {
-        onCompletion(false)
-      } else {
-        onCompletion(true)
-      }
-    })
+    _ = try? tripCollection.addDocument(
+      from: newTrip,
+      completion: { error in
+        if error != nil {
+          onCompletion(false)
+        } else {
+          onCompletion(true)
+        }
+      })
   }
 
   // MARK: location related stuff

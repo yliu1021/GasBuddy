@@ -17,6 +17,7 @@ struct AppButtonStyle: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration
       .label
+      .font(.medium(size: 18))
       .padding()
       .background(Color.black)
       .foregroundColor(.white)

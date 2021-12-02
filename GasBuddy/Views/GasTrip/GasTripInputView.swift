@@ -18,13 +18,15 @@ struct GasTripInputView: View {
       CaptionedTextField(
         prompt: "0.00",
         text: $totalPrice,
-        caption: "Total price")
-        .keyboardType(.decimalPad)
+        caption: "Total price"
+      )
+      .keyboardType(.decimalPad)
       CaptionedTextField(
         prompt: "0",
         text: $gallons,
-        caption: "Gallons")
-        .keyboardType(.decimalPad)
+        caption: "Gallons"
+      )
+      .keyboardType(.decimalPad)
       CaptionedTextField(
         prompt: "Station",
         text: $station,
@@ -43,9 +45,10 @@ struct GasTripInputView_Previews: PreviewProvider {
       totalPrice: .constant(""),
       gallons: .constant(""),
       station: .constant(""),
-      address: .constant(""))
-      .previewLayout(.sizeThatFits)
-      .padding()
-      .previewDisplayName("Default preview")
+      address: .constant("")
+    )
+    .previewLayout(.sizeThatFits)
+    .padding()
+    .previewDisplayName("Default preview")
   }
 }

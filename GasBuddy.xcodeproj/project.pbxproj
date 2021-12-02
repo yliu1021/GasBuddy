@@ -29,6 +29,9 @@
 		E27750B7275872C800F189AA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750B6275872C800F189AA /* Font.swift */; };
 		E27750B92758745D00F189AA /* GasTripInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750B82758745D00F189AA /* GasTripInputView.swift */; };
 		E27750BB2758775500F189AA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750BA2758775500F189AA /* Button.swift */; };
+		E27750BF2758910100F189AA /* PastTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750BE2758910100F189AA /* PastTripsView.swift */; };
+		E27750C12758911000F189AA /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750C02758911000F189AA /* TripView.swift */; };
+		E27750C3275895BD00F189AA /* PastTripsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750C2275895BD00F189AA /* PastTripsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		E27750B6275872C800F189AA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E27750B82758745D00F189AA /* GasTripInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripInputView.swift; sourceTree = "<group>"; };
 		E27750BA2758775500F189AA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E27750BE2758910100F189AA /* PastTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripsView.swift; sourceTree = "<group>"; };
+		E27750C02758911000F189AA /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		E27750C2275895BD00F189AA /* PastTripsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +189,9 @@
 		E27750BC2758864400F189AA /* GasTrip */ = {
 			isa = PBXGroup;
 			children = (
-				E27750B82758745D00F189AA /* GasTripInputView.swift */,
-				E2370D262756985E00607F2D /* GasTripView.swift */,
 				E2370D28275699F500607F2D /* GasTripViewModel.swift */,
+				E2370D262756985E00607F2D /* GasTripView.swift */,
+				E27750B82758745D00F189AA /* GasTripInputView.swift */,
 			);
 			path = GasTrip;
 			sourceTree = "<group>";
@@ -193,6 +199,9 @@
 		E27750BD2758868500F189AA /* PastTrips */ = {
 			isa = PBXGroup;
 			children = (
+				E27750C2275895BD00F189AA /* PastTripsViewModel.swift */,
+				E27750BE2758910100F189AA /* PastTripsView.swift */,
+				E27750C02758911000F189AA /* TripView.swift */,
 			);
 			path = PastTrips;
 			sourceTree = "<group>";
@@ -385,8 +394,11 @@
 				E27750B7275872C800F189AA /* Font.swift in Sources */,
 				E2370D29275699F500607F2D /* GasTripViewModel.swift in Sources */,
 				E27750B527586FFF00F189AA /* CaptionedTextField.swift in Sources */,
+				E27750BF2758910100F189AA /* PastTripsView.swift in Sources */,
 				E2370D272756985E00607F2D /* GasTripView.swift in Sources */,
+				E27750C12758911000F189AA /* TripView.swift in Sources */,
 				E27750B92758745D00F189AA /* GasTripInputView.swift in Sources */,
+				E27750C3275895BD00F189AA /* PastTripsViewModel.swift in Sources */,
 				E27750BB2758775500F189AA /* Button.swift in Sources */,
 				E2370CFA275680AB00607F2D /* GasBuddyApp.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ struct CaptionedTextField: View {
   var body: some View {
     VStack(alignment: .leading) {
       TextField(prompt, text: $text)
-        .font(.text(size: fontSize))
+        .font(.heavy(size: fontSize))
       Text(caption)
         .font(.caption)
     }
@@ -29,9 +29,10 @@ struct CaptionedTextField_Previews: PreviewProvider {
       prompt: "some prompt",
       text: .constant(""),
       caption: "some caption",
-      fontSize: 30)
-      .previewLayout(.sizeThatFits)
-      .padding()
-      .previewDisplayName("Default preview")
+      fontSize: 30
+    )
+    .previewLayout(.sizeThatFits)
+    .padding()
+    .previewDisplayName("Default preview")
   }
 }
