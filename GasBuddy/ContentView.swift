@@ -13,12 +13,14 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
-      Button("Add") {
+      Button {
         self.presentingFillView = true
+      } label: {
+        Text("Add")
       }
     }
     .popover(isPresented: $presentingFillView) {
-      FillView(isPresented: $presentingFillView)
+      GasTripView(isPresented: $presentingFillView)
     }
   }
 }

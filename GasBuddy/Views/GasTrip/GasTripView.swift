@@ -1,0 +1,51 @@
+//
+//  GasTripView.swift
+//  GasBuddy
+//
+//  Created by Yuhan Liu on 11/30/21.
+//
+
+import SwiftUI
+
+struct GasTripView: View {
+  @Binding var isPresented: Bool
+
+  @StateObject var state = GasTripViewModel()
+
+  var body: some View {
+    VStack {
+      Text("New Gas Trip")
+        .font(.text(size: 40))
+      Spacer()
+      GasTripInputView(
+        totalPrice: $state.totalPriceString,
+        gallons: $state.gallonsString,
+        station: $state.stationString,
+        address: $state.addressString)
+      Spacer()
+      Button {
+        state.save { success in
+          self.isPresented = !success
+        }
+      } label: {
+        Text("Submit")
+          .frame(maxWidth: .infinity)
+      }
+      .buttonStyle(AppButtonStyle())
+    }
+    .padding()
+    .onAppear {
+      state.requestAuthorization()
+      state.startUpdatingLocatin()
+    }
+    .onDisappear {
+      state.stopUpdatingLocation()
+    }
+  }
+}
+
+struct GasTripView_Previews: PreviewProvider {
+  static var previews: some View {
+    GasTripView(isPresented: .constant(true))
+  }
+}

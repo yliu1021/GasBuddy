@@ -14,8 +14,21 @@
 		E2370D0B275680AC00607F2D /* GasBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D0A275680AC00607F2D /* GasBuddyTests.swift */; };
 		E2370D15275680AC00607F2D /* GasBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D14275680AC00607F2D /* GasBuddyUITests.swift */; };
 		E2370D17275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D16275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift */; };
-		E2370D272756985E00607F2D /* FillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D262756985E00607F2D /* FillView.swift */; };
-		E2370D29275699F500607F2D /* FillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D28275699F500607F2D /* FillViewModel.swift */; };
+		E2370D272756985E00607F2D /* GasTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D262756985E00607F2D /* GasTripView.swift */; };
+		E2370D29275699F500607F2D /* GasTripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D28275699F500607F2D /* GasTripViewModel.swift */; };
+		E2370D2F2756C53400607F2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2370D2E2756C53400607F2D /* GoogleService-Info.plist */; };
+		E2370D322756D58400607F2D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D312756D58400607F2D /* FirebaseAnalytics */; };
+		E2370D342756D58400607F2D /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D332756D58400607F2D /* FirebaseAnalyticsSwift-Beta */; };
+		E2370D362756D58400607F2D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D352756D58400607F2D /* FirebaseAuth */; };
+		E2370D382756D58400607F2D /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D372756D58400607F2D /* FirebaseAuthCombine-Community */; };
+		E2370D3A2756D58400607F2D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D392756D58400607F2D /* FirebaseFirestore */; };
+		E2370D3C2756D58400607F2D /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D3B2756D58400607F2D /* FirebaseFirestoreCombine-Community */; };
+		E2370D3E2756D58400607F2D /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = E2370D3D2756D58400607F2D /* FirebaseFirestoreSwift-Beta */; };
+		E2370D412756D5BD00607F2D /* GasTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2370D402756D5BD00607F2D /* GasTrip.swift */; };
+		E27750B527586FFF00F189AA /* CaptionedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750B427586FFF00F189AA /* CaptionedTextField.swift */; };
+		E27750B7275872C800F189AA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750B6275872C800F189AA /* Font.swift */; };
+		E27750B92758745D00F189AA /* GasTripInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750B82758745D00F189AA /* GasTripInputView.swift */; };
+		E27750BB2758775500F189AA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27750BA2758775500F189AA /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +59,15 @@
 		E2370D10275680AC00607F2D /* GasBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2370D14275680AC00607F2D /* GasBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITests.swift; sourceTree = "<group>"; };
 		E2370D16275680AC00607F2D /* GasBuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E2370D262756985E00607F2D /* FillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillView.swift; sourceTree = "<group>"; };
-		E2370D28275699F500607F2D /* FillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewModel.swift; sourceTree = "<group>"; };
+		E2370D262756985E00607F2D /* GasTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripView.swift; sourceTree = "<group>"; };
+		E2370D28275699F500607F2D /* GasTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripViewModel.swift; sourceTree = "<group>"; };
+		E2370D2E2756C53400607F2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2370D402756D5BD00607F2D /* GasTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTrip.swift; sourceTree = "<group>"; };
+		E2370D422756EB9F00607F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E27750B427586FFF00F189AA /* CaptionedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedTextField.swift; sourceTree = "<group>"; };
+		E27750B6275872C800F189AA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		E27750B82758745D00F189AA /* GasTripInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripInputView.swift; sourceTree = "<group>"; };
+		E27750BA2758775500F189AA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +75,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2370D342756D58400607F2D /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				E2370D362756D58400607F2D /* FirebaseAuth in Frameworks */,
+				E2370D3E2756D58400607F2D /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				E2370D322756D58400607F2D /* FirebaseAnalytics in Frameworks */,
+				E2370D3C2756D58400607F2D /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E2370D3A2756D58400607F2D /* FirebaseFirestore in Frameworks */,
+				E2370D382756D58400607F2D /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +125,9 @@
 		E2370CF8275680AB00607F2D /* GasBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E2370D2E2756C53400607F2D /* GoogleService-Info.plist */,
+				E2370D422756EB9F00607F2D /* Info.plist */,
+				E2370D3F2756D5A800607F2D /* Models */,
 				E2370D252756984A00607F2D /* Views */,
 				E2370CF9275680AB00607F2D /* GasBuddyApp.swift */,
 				E2370CFB275680AB00607F2D /* ContentView.swift */,
@@ -135,10 +165,38 @@
 		E2370D252756984A00607F2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E2370D262756985E00607F2D /* FillView.swift */,
-				E2370D28275699F500607F2D /* FillViewModel.swift */,
+				E27750BD2758868500F189AA /* PastTrips */,
+				E27750BC2758864400F189AA /* GasTrip */,
+				E27750B427586FFF00F189AA /* CaptionedTextField.swift */,
+				E27750B6275872C800F189AA /* Font.swift */,
+				E27750BA2758775500F189AA /* Button.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E2370D3F2756D5A800607F2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2370D402756D5BD00607F2D /* GasTrip.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E27750BC2758864400F189AA /* GasTrip */ = {
+			isa = PBXGroup;
+			children = (
+				E27750B82758745D00F189AA /* GasTripInputView.swift */,
+				E2370D262756985E00607F2D /* GasTripView.swift */,
+				E2370D28275699F500607F2D /* GasTripViewModel.swift */,
+			);
+			path = GasTrip;
+			sourceTree = "<group>";
+		};
+		E27750BD2758868500F189AA /* PastTrips */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PastTrips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +217,15 @@
 			dependencies = (
 			);
 			name = GasBuddy;
+			packageProductDependencies = (
+				E2370D312756D58400607F2D /* FirebaseAnalytics */,
+				E2370D332756D58400607F2D /* FirebaseAnalyticsSwift-Beta */,
+				E2370D352756D58400607F2D /* FirebaseAuth */,
+				E2370D372756D58400607F2D /* FirebaseAuthCombine-Community */,
+				E2370D392756D58400607F2D /* FirebaseFirestore */,
+				E2370D3B2756D58400607F2D /* FirebaseFirestoreCombine-Community */,
+				E2370D3D2756D58400607F2D /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = GasBuddy;
 			productReference = E2370CF6275680AB00607F2D /* GasBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +298,9 @@
 				Base,
 			);
 			mainGroup = E2370CED275680AB00607F2D;
+			packageReferences = (
+				E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E2370CF7275680AB00607F2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +319,7 @@
 			files = (
 				E2370D01275680AC00607F2D /* Preview Assets.xcassets in Resources */,
 				E2370CFE275680AC00607F2D /* Assets.xcassets in Resources */,
+				E2370D2F2756C53400607F2D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +382,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2370D412756D5BD00607F2D /* GasTrip.swift in Sources */,
 				E2370CFC275680AB00607F2D /* ContentView.swift in Sources */,
-				E2370D29275699F500607F2D /* FillViewModel.swift in Sources */,
-				E2370D272756985E00607F2D /* FillView.swift in Sources */,
+				E27750B7275872C800F189AA /* Font.swift in Sources */,
+				E2370D29275699F500607F2D /* GasTripViewModel.swift in Sources */,
+				E27750B527586FFF00F189AA /* CaptionedTextField.swift in Sources */,
+				E2370D272756985E00607F2D /* GasTripView.swift in Sources */,
+				E27750B92758745D00F189AA /* GasTripInputView.swift in Sources */,
+				E27750BB2758775500F189AA /* Button.swift in Sources */,
 				E2370CFA275680AB00607F2D /* GasBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +554,13 @@
 				DEVELOPMENT_TEAM = W862DC2K44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasBuddy/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) uses your location to find gas stations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,11 +585,13 @@
 				DEVELOPMENT_TEAM = W862DC2K44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasBuddy/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) uses your location to find gas stations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,6 +741,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2370D312756D58400607F2D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E2370D332756D58400607F2D /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		E2370D352756D58400607F2D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E2370D372756D58400607F2D /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		E2370D392756D58400607F2D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E2370D3B2756D58400607F2D /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		E2370D3D2756D58400607F2D /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2370D302756D58400607F2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2370CEE275680AB00607F2D /* Project object */;
 }
