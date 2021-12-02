@@ -25,6 +25,7 @@ struct GasTripView: View {
         station: $state.stationString,
         address: $state.addressString)
       Spacer()
+      GasTripLocationStatusView(locationStatus: $state.locationStatus)
       Button {
         state.save { success in
           self.isPresented = !success
@@ -39,10 +40,21 @@ struct GasTripView: View {
     .onAppear {
       state.authStatus = self.authStatus
       state.requestAuthorization()
-      state.startUpdatingLocatin()
+      state.startUpdatingLocation()
     }
     .onDisappear {
       state.stopUpdatingLocation()
+    }
+    .onChange(of: state.locationStatus) { newValue in
+      print("\(newValue)")
+      if case .locatedWithAddess(_, station: let station, address: let address) = newValue {
+        if state.stationString.isEmpty {
+          state.stationString = station
+        }
+        if state.addressString.isEmpty {
+          state.addressString = address
+        }
+      }
     }
   }
 }
