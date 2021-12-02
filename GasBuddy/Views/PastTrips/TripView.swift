@@ -59,6 +59,7 @@ struct TripView_Previews: PreviewProvider {
   static var previews: some View {
     TripView(
       trip: GasTrip(
+        userID: "",
         totalPrice: 42,
         gallons: 21,
         station: "Costco",

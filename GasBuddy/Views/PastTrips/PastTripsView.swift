@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PastTripsView: View {
 
+  @EnvironmentObject private var authStatus: AuthStatus
   @StateObject private var state = PastTripsViewModel()
-
   @State private var presentingNewTripView = false
 
   var body: some View {
@@ -42,6 +42,7 @@ struct PastTripsView: View {
       }
     )
     .onAppear {
+      state.authStatus = self.authStatus
       state.startListening()
     }
     .onDisappear {

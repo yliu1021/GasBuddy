@@ -5,14 +5,41 @@
 //  Created by Yuhan Liu on 11/30/21.
 //
 
+import FirebaseAuth
 import SwiftUI
+
+class AuthStatus: ObservableObject {
+  @Published var uid: String?
+}
 
 struct ContentView: View {
 
-  @State private var presentingFillView = false
+  @StateObject private var authStatus = AuthStatus()
 
   var body: some View {
-    PastTripsView()
+    Group {
+      if authStatus.uid != nil {
+        PastTripsView()
+      } else {
+        Text("Logging in...")
+        ProgressView()
+      }
+    }
+    .environmentObject(authStatus)
+    .onAppear {
+      self.login()
+      Auth.auth().addStateDidChangeListener { _, user in
+        authStatus.uid = user?.uid
+      }
+    }
+  }
+
+  func login() {
+    Auth.auth().signInAnonymously { _, error in
+      if let error = error {
+        print("Error signing in: \(error)")
+      }
+    }
   }
 }
 

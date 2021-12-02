@@ -9,9 +9,10 @@ import Combine
 import CoreLocation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import SwiftUI
 
 class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+
+  var authStatus: AuthStatus?
 
   @Published var totalPriceString: String = ""
   @Published var gallonsString: String = ""
@@ -21,6 +22,10 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
   private let tripCollection = Firestore.firestore().collection("trips")
 
   func save(onCompletion: @escaping (Bool) -> Void) {
+    guard let uid = authStatus?.uid else {
+      print("Not logged in")
+      return
+    }
     guard let totalPrice = Double(totalPriceString), let gallons = Double(gallonsString) else {
       return
     }
@@ -31,13 +36,14 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
       location = nil
     }
     let newTrip = GasTrip(
+      userID: uid,
       totalPrice: totalPrice,
       gallons: gallons,
       station: stationString,
       streetAddress: addressString,
       date: Date(),
       location: location)
-    _ = try? tripCollection.addDocument(
+    _ = try? self.tripCollection.addDocument(
       from: newTrip,
       completion: { error in
         if error != nil {

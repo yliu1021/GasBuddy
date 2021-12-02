@@ -45,6 +45,7 @@ extension GeoPoint {
 
 struct GasTrip: Codable, Identifiable {
   @DocumentID public var id: String?
+  var userID: String
   var totalPrice: Double
   var gallons: Double
   var station: String

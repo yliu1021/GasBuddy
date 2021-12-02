@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct GasTripView: View {
+
   @Binding var isPresented: Bool
 
+  @EnvironmentObject private var authStatus: AuthStatus
   @StateObject var state = GasTripViewModel()
 
   var body: some View {
@@ -35,6 +37,7 @@ struct GasTripView: View {
     }
     .padding()
     .onAppear {
+      state.authStatus = self.authStatus
       state.requestAuthorization()
       state.startUpdatingLocatin()
     }

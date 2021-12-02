@@ -11,24 +11,32 @@ import Foundation
 
 class PastTripsViewModel: ObservableObject {
 
+  var authStatus: AuthStatus?
+
   @Published var pastTrips: [GasTrip] = []
 
   private let tripCollection = Firestore.firestore().collection("trips")
   private var listener: ListenerRegistration?
 
   func startListening() {
-    self.stopListening()
-    self.listener = tripCollection.addSnapshotListener { snapshot, error in
-      guard let snapshot = snapshot else {
-        print("Snapshot listener error: \(error!)")
-        return
-      }
-      let documents = snapshot.documents
-      let trips = documents.compactMap { try? $0.data(as: GasTrip.self) }
-      self.pastTrips = trips.sorted { tripA, tripB in
-        tripA.date < tripB.date
-      }
+    guard let uid = authStatus?.uid else {
+      print("Not logged in")
+      return
     }
+    self.stopListening()
+    self.listener = self.tripCollection
+      .whereField("userID", isEqualTo: uid)
+      .addSnapshotListener { snapshot, error in
+        guard let snapshot = snapshot else {
+          print("Snapshot listener error: \(error!)")
+          return
+        }
+        let documents = snapshot.documents
+        let trips = documents.compactMap { try? $0.data(as: GasTrip.self) }
+        self.pastTrips = trips.sorted { tripA, tripB in
+          tripA.date < tripB.date
+        }
+      }
   }
 
   func stopListening() {
