@@ -63,7 +63,6 @@
 		E2370D28275699F500607F2D /* GasTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripViewModel.swift; sourceTree = "<group>"; };
 		E2370D2E2756C53400607F2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2370D402756D5BD00607F2D /* GasTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTrip.swift; sourceTree = "<group>"; };
-		E2370D422756EB9F00607F2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E27750B427586FFF00F189AA /* CaptionedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedTextField.swift; sourceTree = "<group>"; };
 		E27750B6275872C800F189AA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E27750B82758745D00F189AA /* GasTripInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasTripInputView.swift; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				E2370D2E2756C53400607F2D /* GoogleService-Info.plist */,
-				E2370D422756EB9F00607F2D /* Info.plist */,
 				E2370D3F2756D5A800607F2D /* Models */,
 				E2370D252756984A00607F2D /* Views */,
 				E2370CF9275680AB00607F2D /* GasBuddyApp.swift */,
@@ -554,8 +552,7 @@
 				DEVELOPMENT_TEAM = W862DC2K44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GasBuddy/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) uses your location to find gas stations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GasBuddy uses your location to find gas stations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -585,8 +582,7 @@
 				DEVELOPMENT_TEAM = W862DC2K44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GasBuddy/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) uses your location to find gas stations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GasBuddy uses your location to find gas stations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
