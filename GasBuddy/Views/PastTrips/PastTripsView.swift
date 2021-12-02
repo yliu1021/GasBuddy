@@ -16,13 +16,13 @@ struct PastTripsView: View {
   var body: some View {
     NavigationView {
       VStack {
-        ScrollView(.vertical, showsIndicators: true) {
+        List {
           ForEach(state.pastTrips) { trip in
             TripView(trip: trip)
               .padding(.vertical, 4)
           }
-          .padding()
         }
+        .listStyle(.plain)
         Button {
           self.presentingNewTripView = true
         } label: {

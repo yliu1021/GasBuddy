@@ -19,8 +19,8 @@ struct AppButtonStyle: ButtonStyle {
       .label
       .font(.medium(size: 18))
       .padding()
-      .background(Color.black)
-      .foregroundColor(.white)
+      .background(Color.purple)
+      .foregroundColor(Color.white)
       .cornerRadius(self.radius)
   }
 }

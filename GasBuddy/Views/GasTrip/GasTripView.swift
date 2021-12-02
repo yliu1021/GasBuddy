@@ -17,7 +17,8 @@ struct GasTripView: View {
   var body: some View {
     VStack {
       Text("New Gas Trip")
-        .font(.heavy(size: 40))
+        .font(.heavy(size: 50))
+        .padding(.top, 20)
       Spacer()
       GasTripInputView(
         totalPrice: $state.totalPriceString,
