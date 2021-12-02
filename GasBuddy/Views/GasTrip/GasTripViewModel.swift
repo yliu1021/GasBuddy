@@ -187,6 +187,7 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
       self.locationStatus = .notAuthorized
     default:
       self.locationStatus = .idle
+      self.startUpdatingLocation()
     }
   }
 
