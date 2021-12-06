@@ -71,7 +71,8 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     _ = try? self.tripCollection.addDocument(
       from: newTrip,
       completion: { error in
-        if error != nil {
+        if let error = error {
+          print("Save error: \(error)")
           onCompletion(false)
         } else {
           onCompletion(true)
