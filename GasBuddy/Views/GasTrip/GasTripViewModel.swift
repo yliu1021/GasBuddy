@@ -161,7 +161,6 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
   func requestAuthorization() {
     guard self.locationManager.authorizationStatus == .notDetermined else {
-      print(self.locationManager.authorizationStatus)
       return
     }
     self.locationManager.requestWhenInUseAuthorization()
