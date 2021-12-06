@@ -43,4 +43,17 @@ class PastTripsViewModel: ObservableObject {
     self.listener?.remove()
   }
 
+  func removeTrip(at index: IndexSet.Element) {
+    guard index < pastTrips.count && index >= 0 else {
+      print("Can't remove index \(index): out of bounds")
+      return
+    }
+    let trip = pastTrips[index]
+    guard let tripId = trip.id else {
+      print("Can't find trip id: \(trip)")
+      return
+    }
+    self.tripCollection.document(tripId).delete()
+  }
+
 }

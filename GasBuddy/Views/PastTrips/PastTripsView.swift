@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import simd
 
 struct PastTripsView: View {
 
@@ -14,26 +15,29 @@ struct PastTripsView: View {
   @State private var presentingNewTripView = false
 
   var body: some View {
-    NavigationView {
-      VStack {
-        List {
-          ForEach(state.pastTrips) { trip in
-            TripView(trip: trip)
-              .padding(.vertical, 4)
+    VStack(alignment: .leading) {
+      Text("Past Trips")
+        .font(.heavy(size: 50))
+        .padding()
+      List{
+        ForEach(state.pastTrips) { trip in
+          TripView(trip: trip)
+        }
+        .onDelete { indices in
+          for index in indices {
+            state.removeTrip(at: index)
           }
         }
-        .listStyle(.plain)
-        Button {
-          self.presentingNewTripView = true
-        } label: {
-          Text("New Trip")
-            .frame(maxWidth: .infinity)
-        }
-        .padding()
-        .buttonStyle(AppButtonStyle())
       }
-      .navigationTitle("Past Trips")
-      .navigationBarTitleDisplayMode(.automatic)
+      .listStyle(.plain)
+      Button {
+        self.presentingNewTripView = true
+      } label: {
+        Text("New Trip")
+          .frame(maxWidth: .infinity)
+      }
+      .padding()
+      .buttonStyle(AppButtonStyle())
     }
     .popover(
       isPresented: self.$presentingNewTripView,
@@ -52,7 +56,14 @@ struct PastTripsView: View {
 }
 
 struct PastTripsView_Previews: PreviewProvider {
+  static let authStatus: AuthStatus = {
+    let authStatus = AuthStatus()
+    authStatus.uid = "IyEDbAPqlMZ0Qv9sjKGTyWMGgb22"
+    return authStatus
+  }()
+
   static var previews: some View {
     PastTripsView()
+      .environmentObject(authStatus)
   }
 }

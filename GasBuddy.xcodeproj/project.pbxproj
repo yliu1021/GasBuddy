@@ -220,8 +220,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2370D1A275680AC00607F2D /* Build configuration list for PBXNativeTarget "GasBuddy" */;
 			buildPhases = (
-				E2370D24275683A400607F2D /* Swift Format */,
 				E2370CF2275680AB00607F2D /* Sources */,
+				E2370D24275683A400607F2D /* Swift Format */,
 				E2370CF3275680AB00607F2D /* Frameworks */,
 				E2370CF4275680AB00607F2D /* Resources */,
 			);
@@ -355,7 +355,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E2370D24275683A400607F2D /* Swift Format */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -367,7 +367,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which swift-format >/dev/null; then\n    swift-format -m format -i -r ${PROJECT_DIR}\nelse\n    echo \"warning: swift-format not installed\"\nfi\n";
 		};
