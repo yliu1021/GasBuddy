@@ -23,7 +23,7 @@ enum LocationStatus: Equatable {
 
 class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
-  var authStatus: AuthStatus?
+  var authStatus: AuthStatus!
 
   @Published var totalPriceString: String = ""
   @Published var gallonsString: String = ""
@@ -47,7 +47,7 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
   private let tripCollection = Firestore.firestore().collection("trips")
 
   func save(onCompletion: @escaping (Bool) -> Void) {
-    guard let uid = authStatus?.uid else {
+    guard let uid = authStatus.uid else {
       print("Not logged in")
       return
     }

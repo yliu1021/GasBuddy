@@ -11,7 +11,7 @@ import Foundation
 
 class PastTripsViewModel: ObservableObject {
 
-  var authStatus: AuthStatus?
+  var authStatus: AuthStatus!
 
   @Published var pastTrips: [GasTrip] = []
 
@@ -19,7 +19,7 @@ class PastTripsViewModel: ObservableObject {
   private var listener: ListenerRegistration?
 
   func startListening() {
-    guard let uid = authStatus?.uid else {
+    guard let uid = authStatus.uid else {
       print("Not logged in")
       return
     }
