@@ -85,8 +85,11 @@ class GasTripViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
   private lazy var locationManager: CLLocationManager = {
     let locationManager = CLLocationManager()
     locationManager.delegate = self
+    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+    locationManager.distanceFilter = 30  // meters
     return locationManager
   }()
+
   private var locationSubject: CurrentValueSubject<CLLocation?, Never> = CurrentValueSubject(nil)
 
   private func locationAuthorized() -> Bool {

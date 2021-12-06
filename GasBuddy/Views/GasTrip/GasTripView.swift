@@ -47,7 +47,7 @@ struct GasTripView: View {
       state.stopUpdatingLocation()
     }
     .onChange(of: state.locationStatus) { newValue in
-      print("\(newValue)")
+      print("New location status: \(newValue)")
       if case .locatedWithAddess(_, station: let station, address: let address) = newValue {
         if state.stationString.isEmpty {
           state.stationString = station
