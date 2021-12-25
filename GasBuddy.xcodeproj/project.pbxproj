@@ -22,6 +22,7 @@
 		E27414AC2774C19D00861006 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27414AB2774C19D00861006 /* LocationView.swift */; };
 		E27414AE2774D09D00861006 /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27414AD2774D09C00861006 /* MyTripsView.swift */; };
 		E27414B02777414900861006 /* GasStationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27414AF2777414900861006 /* GasStationSearchViewModel.swift */; };
+		E27414B22777C9DD00861006 /* TripsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27414B12777C9DD00861006 /* TripsMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E27414AB2774C19D00861006 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E27414AD2774D09C00861006 /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
 		E27414AF2777414900861006 /* GasStationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationSearchViewModel.swift; sourceTree = "<group>"; };
+		E27414B12777C9DD00861006 /* TripsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				E27414A62774B19000861006 /* NewTripView.swift */,
 				E27414AB2774C19D00861006 /* LocationView.swift */,
 				E27414AD2774D09C00861006 /* MyTripsView.swift */,
+				E27414B12777C9DD00861006 /* TripsMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				E27414A72774B19000861006 /* NewTripView.swift in Sources */,
 				E27414AC2774C19D00861006 /* LocationView.swift in Sources */,
 				E274147F277337CA00861006 /* GasBuddy.xcdatamodeld in Sources */,
+				E27414B22777C9DD00861006 /* TripsMapView.swift in Sources */,
 				E27414B02777414900861006 /* GasStationSearchViewModel.swift in Sources */,
 				E274147C277337CA00861006 /* Persistence.swift in Sources */,
 				E27414A327744CB100861006 /* DashboardView.swift in Sources */,

@@ -3,12 +3,12 @@
     <entity name="GasTrip" representedClassName="GasTrip" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" defaultDateTimeInterval="631170000" usesScalarValueType="NO"/>
         <attribute name="gallons" attributeType="Double" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="station" optional="YES" attributeType="String"/>
         <attribute name="totalPrice" attributeType="Double" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="GasTrip" positionX="-707.2606201171875" positionY="-115.180419921875" width="128" height="133"/>
+        <element name="GasTrip" positionX="-707.2606201171875" positionY="-115.180419921875" width="128" height="119"/>
     </elements>
 </model>

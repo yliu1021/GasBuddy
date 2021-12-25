@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyTripsView: View {
 
+  @Binding var showingDashboard: Bool
+  
   @Environment(\.managedObjectContext) private var viewContext
   @FetchRequest(
     entity: GasTrip.entity(),
@@ -17,10 +19,7 @@ struct MyTripsView: View {
   ) private var trips: FetchedResults<GasTrip>
   
   var body: some View {
-    VStack(alignment: .leading) {
-      Text("My Trips")
-        .font(.largeTitle.bold())
-        .padding([.top, .leading], 20)
+    NavigationView {
       List {
         ForEach(trips) { trip in
           TripCellView(trip: trip).padding(2)
@@ -32,7 +31,21 @@ struct MyTripsView: View {
         }
       }
       .listStyle(.plain)
-    }
+      .navigationTitle(Text("My Trips"))
+      .toolbar {
+        ToolbarItemGroup(placement: .bottomBar) {
+          Button {
+            self.showingDashboard = true
+          } label: {
+            HStack {
+              Image(systemName: "chevron.backward.circle.fill")
+              Text("Back")
+            }
+          }
+          Spacer()
+        }
+      }
+    }.navigationViewStyle(.stack)
   }
 }
 
@@ -102,7 +115,7 @@ struct TripCellView: View {
 
 struct MyTripsView_Previews: PreviewProvider {
   static var previews: some View {
-    MyTripsView()
+    MyTripsView(showingDashboard: .constant(false))
       .environment(
         \.managedObjectContext,
          PersistenceController.preview.container.viewContext)
