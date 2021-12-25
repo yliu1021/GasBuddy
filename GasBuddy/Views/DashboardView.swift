@@ -88,7 +88,9 @@ struct DashboardView: View {
         }.padding()
         Spacer()
       }
-      TripsMapView(trips: self.trips.compactMap { $0 })
+      if (!self.trips.isEmpty) {
+        TripsMapView(trips: self.trips.compactMap { $0 })
+      }
       Spacer()
       toolbar.frame(height: 80)
     }
