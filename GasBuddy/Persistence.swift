@@ -13,14 +13,14 @@ struct PersistenceController {
   static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
     let viewContext = result.container.viewContext
-    for i in 0..<3 {
+    for i in 0..<30 {
       let trip = GasTrip(context: viewContext)
       trip.latitude = Double.random(in: 0..<180)
       trip.longitude = Double.random(in: 0..<180)
       trip.gallons = Double.random(in: 14..<25)
-      trip.totalPrice = Double.random(in: 40..<60)
+      trip.totalPrice = trip.gallons * Double.random(in: 3..<5)
       trip.station = "Brand \(i)"
-      trip.date = Date()
+      trip.date = Date(timeIntervalSinceNow: -TimeInterval.random(in: 0..<32_000_000))
     }
     do {
       try viewContext.save()

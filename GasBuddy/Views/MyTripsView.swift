@@ -101,7 +101,10 @@ struct TripCellView: View {
 }
 
 struct MyTripsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyTripsView()
-    }
+  static var previews: some View {
+    MyTripsView()
+      .environment(
+        \.managedObjectContext,
+         PersistenceController.preview.container.viewContext)
+  }
 }

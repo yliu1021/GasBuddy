@@ -10,11 +10,17 @@ import CoreData
 
 struct ContentView: View {
 
+  static var toolBarHeight: CGFloat = 80
+  
   @State private var showingNewTripView: Bool = false
-  @State private var showingDashboard: Bool = true
+  @State private var showingDashboard: Bool
+  
+  init(showingDashboard: Bool = true) {
+    self.showingDashboard = showingDashboard
+  }
   
   var body: some View {
-    ZStack(alignment: .bottom) {
+    VStack(spacing: 0) {
       Group {
         if self.showingDashboard {
           DashboardView()
@@ -24,8 +30,10 @@ struct ContentView: View {
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
       }
-      .animation(.easeInOut, value: self.showingDashboard)
+      .animation(.easeInOut(duration: 0.2), value: self.showingDashboard)
       toolbar
+        .frame(height: ContentView.toolBarHeight)
+        .background(.ultraThinMaterial)
     }
     .sheet(isPresented: self.$showingNewTripView) {
       NewTripView(isPresented: self.$showingNewTripView)
@@ -40,11 +48,11 @@ struct ContentView: View {
         VStack(alignment: .leading) {
           Image(systemName: "plus.circle.fill")
             .resizable()
-            .frame(width: 44, height: 44)
+            .aspectRatio(1, contentMode: .fit)
           Text("New Trip")
             .font(.caption)
         }
-      }.padding()
+      }
       Spacer()
       Button {
         self.showingDashboard.toggle()
@@ -53,28 +61,32 @@ struct ContentView: View {
           if self.showingDashboard {
             Image(systemName: "list.bullet.circle.fill")
               .resizable()
-              .frame(width: 44, height: 44)
+              .aspectRatio(1, contentMode: .fit)
             Text("My Trips")
               .font(.caption)
           } else {
             Image(systemName: "fuelpump.circle.fill")
               .resizable()
-              .frame(width: 44, height: 44)
+              .aspectRatio(1, contentMode: .fit)
             Text("Trip Summary")
               .font(.caption)
           }
         }
-      }.padding()
-    }.padding()
+      }
+    }
+    .padding(10)
+    .padding([.leading, .trailing], 48)
   }
   
 }
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
-      .environment(
-        \.managedObjectContext,
-         PersistenceController.preview.container.viewContext)
+    Group {
+      ContentView()
+      ContentView(showingDashboard: false)
+    }.environment(
+      \.managedObjectContext,
+       PersistenceController.preview.container.viewContext)
   }
 }
