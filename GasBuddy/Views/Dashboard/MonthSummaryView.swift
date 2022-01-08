@@ -1,25 +1,19 @@
 //
-//  DashboardView.swift
+//  MonthSummaryView.swift
 //  GasBuddy
 //
-//  Created by Yuhan Liu on 12/23/21.
+//  Created by Yuhan Liu on 1/7/22.
 //
 
 import SwiftUI
-import MapKit
 
-struct DashboardView: View {
-  
-  @Binding var showingDashboard: Bool
-  @Binding var showingNewTripView: Bool
+struct MonthSummaryView: View {
 
   @FetchRequest private var trips: FetchedResults<GasTrip>
   
   private var now = Date()
   
-  init(showingDashboard: Binding<Bool>, showingNewTripView: Binding<Bool>) {
-    self._showingDashboard = showingDashboard
-    self._showingNewTripView = showingNewTripView
+  init() {
     let calendar = Calendar.autoupdatingCurrent
     var components = calendar.dateComponents([.month, .year], from: now)
     components.day = 1
@@ -31,7 +25,7 @@ struct DashboardView: View {
       sortDescriptors: [],
       predicate: NSPredicate(format: "date >= %@", monthStart as NSDate))
   }
-
+  
   private var currMonthString: String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "MMMM yyyy"
@@ -73,8 +67,7 @@ struct DashboardView: View {
   }
   
   var body: some View {
-    VStack {
-      Spacer()
+    VStack(spacing: 0) {
       HStack {
         VStack(alignment: .leading) {
           Text("This month")
@@ -90,58 +83,15 @@ struct DashboardView: View {
       }
       if (!self.trips.isEmpty) {
         TripsMapView(trips: self.trips.compactMap { $0 })
+          .frame(height: 240)
       }
-      Spacer()
-      toolbar.frame(height: 80)
     }
-    .frame(maxWidth: .infinity)
   }
   
-  var toolbar: some View {
-    HStack {
-      Button {
-        self.showingNewTripView = true
-      } label: {
-        VStack {
-          Image(systemName: "plus.circle.fill")
-            .resizable()
-            .aspectRatio(1, contentMode: .fit)
-          Text("New Trip")
-            .font(.caption)
-        }
-      }
-      Spacer()
-      Button {
-        self.showingDashboard.toggle()
-      } label: {
-        VStack {
-          if self.showingDashboard {
-            Image(systemName: "list.bullet.circle.fill")
-              .resizable()
-              .aspectRatio(1, contentMode: .fit)
-            Text("My Trips")
-              .font(.caption)
-          } else {
-            Image(systemName: "fuelpump.circle.fill")
-              .resizable()
-              .aspectRatio(1, contentMode: .fit)
-            Text("Trip Summary")
-              .font(.caption)
-          }
-        }
-      }
-    }
-    .padding(12)
-    .padding([.leading, .trailing], 48)
-  }
-
 }
 
-struct DashboardView_Previews: PreviewProvider {
-  static var previews: some View {
-    DashboardView(showingDashboard: .constant(true), showingNewTripView: .constant(false))
-      .environment(
-        \.managedObjectContext,
-         PersistenceController.preview.container.viewContext)
-  }
+struct MonthSummaryView_Previews: PreviewProvider {
+    static var previews: some View {
+        MonthSummaryView()
+    }
 }

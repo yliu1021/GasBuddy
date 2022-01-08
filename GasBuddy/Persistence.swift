@@ -13,7 +13,7 @@ struct PersistenceController {
   static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
     let viewContext = result.container.viewContext
-    for i in 0..<30 {
+    for i in 0..<50 {
       let trip = GasTrip(context: viewContext)
       trip.latitude = Double.random(in: 0..<180)
       trip.longitude = Double.random(in: 0..<180)

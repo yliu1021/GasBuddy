@@ -52,7 +52,7 @@ struct TripsMapView: View {
     } else {
       Map(
         coordinateRegion: self.$region,
-        interactionModes: [.pan, .zoom],
+        interactionModes: [],
         annotationItems: self.trips) { trip in
           MapMarker(coordinate: trip.location!, tint: Color.red)
         }
