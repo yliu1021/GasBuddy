@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MyTripsView: View {
-
-  @Binding var showingDashboard: Bool
+  
+  @State private var showingNewTripView: Bool = false
   
   @Environment(\.managedObjectContext) private var viewContext
   @FetchRequest(
@@ -24,28 +24,27 @@ struct MyTripsView: View {
         ForEach(trips) { trip in
           TripCellView(trip: trip).padding(2)
         }.onDelete { indexSet in
-          indexSet.map { trips[$0] }.forEach(self.viewContext.delete(_:))
+          indexSet.forEach {
+            self.viewContext.delete(self.trips[$0])
+          }
           do {
             try self.viewContext.save()
           } catch {}
         }
       }
       .listStyle(.plain)
-      .navigationTitle(Text("My Trips"))
       .toolbar {
-        ToolbarItemGroup(placement: .bottomBar) {
-          Button {
-            self.showingDashboard = true
-          } label: {
-            HStack {
-              Image(systemName: "chevron.backward.circle.fill")
-              Text("Back")
-            }
-          }
-          Spacer()
+        Button {
+          self.showingNewTripView = true
+        } label: {
+          Image(systemName: "plus.circle.fill")
         }
       }
-    }.navigationViewStyle(.stack)
+      .navigationTitle("My Trips")
+    }
+    .sheet(isPresented: self.$showingNewTripView) {
+      NewTripView(isPresented: self.$showingNewTripView)
+    }
   }
 }
 
@@ -115,7 +114,7 @@ struct TripCellView: View {
 
 struct MyTripsView_Previews: PreviewProvider {
   static var previews: some View {
-    MyTripsView(showingDashboard: .constant(false))
+    MyTripsView()
       .environment(
         \.managedObjectContext,
          PersistenceController.preview.container.viewContext)

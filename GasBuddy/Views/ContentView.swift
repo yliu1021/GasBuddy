@@ -10,7 +10,6 @@ import CoreData
 
 struct ContentView: View {
   
-  @State private var showingNewTripView: Bool = false
   @State private var showingDashboard: Bool
   
   init(showingDashboard: Bool = true) {
@@ -18,20 +17,17 @@ struct ContentView: View {
   }
   
   var body: some View {
-    Group {
-      if self.showingDashboard {
-        DashboardView(
-          showingDashboard: self.$showingDashboard,
-          showingNewTripView: self.$showingNewTripView)
-          .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
-      } else {
-        MyTripsView(showingDashboard: self.$showingDashboard)
-          .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
-      }
-    }
-    .animation(.easeInOut(duration: 0.2), value: self.showingDashboard)
-    .sheet(isPresented: self.$showingNewTripView) {
-      NewTripView(isPresented: self.$showingNewTripView)
+    TabView {
+      DashboardView()
+        .tabItem {
+          Image(systemName: "fuelpump")
+          Text("Dashboard")
+        }
+      MyTripsView()
+        .tabItem {
+          Image(systemName: "list.bullet")
+          Text("My Trips")
+        }
     }
   }
   

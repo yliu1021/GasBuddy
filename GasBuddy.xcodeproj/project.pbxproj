@@ -58,8 +58,6 @@
 		E2741492277337CA00861006 /* GasBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITests.swift; sourceTree = "<group>"; };
 		E2741494277337CA00861006 /* GasBuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasBuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E27414A227744CB100861006 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		E27414A42774511500861006 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		E27414A52774AA0000861006 /* ViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ViewPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E27414A62774B19000861006 /* NewTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripView.swift; sourceTree = "<group>"; };
 		E27414A92774BAE100861006 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E27414AB2774C19D00861006 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
@@ -96,6 +94,7 @@
 		E242A68327894FAB00B55A06 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				E242A68427894FC800B55A06 /* NewTrip */,
 				E27414A227744CB100861006 /* DashboardView.swift */,
 				E242A685278951AA00B55A06 /* MonthSummaryView.swift */,
 				E27414B12777C9DD00861006 /* TripsMapView.swift */,
@@ -115,8 +114,6 @@
 		E2741466277337C900861006 = {
 			isa = PBXGroup;
 			children = (
-				E27414A52774AA0000861006 /* ViewPlayground.playground */,
-				E27414A42774511500861006 /* MyPlayground.playground */,
 				E2741471277337C900861006 /* GasBuddy */,
 				E2741487277337CA00861006 /* GasBuddyTests */,
 				E2741491277337CA00861006 /* GasBuddyUITests */,
@@ -178,7 +175,6 @@
 			children = (
 				E2741474277337C900861006 /* ContentView.swift */,
 				E242A68327894FAB00B55A06 /* Dashboard */,
-				E242A68427894FC800B55A06 /* NewTrip */,
 				E27414AD2774D09C00861006 /* MyTripsView.swift */,
 			);
 			path = Views;
