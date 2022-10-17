@@ -94,7 +94,6 @@
 		E242A68327894FAB00B55A06 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				E242A68427894FC800B55A06 /* NewTrip */,
 				E27414A227744CB100861006 /* DashboardView.swift */,
 				E242A685278951AA00B55A06 /* MonthSummaryView.swift */,
 				E27414B12777C9DD00861006 /* TripsMapView.swift */,
@@ -174,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				E2741474277337C900861006 /* ContentView.swift */,
+				E242A68427894FC800B55A06 /* NewTrip */,
 				E242A68327894FAB00B55A06 /* Dashboard */,
 				E27414AD2774D09C00861006 /* MyTripsView.swift */,
 			);
@@ -501,6 +501,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,6 +533,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
